@@ -12,13 +12,10 @@ Cookiecutter Data Science v2 requires Python 3.8+. Since this is a cross-project
 
 ```bash
 # With pipx from PyPI (recommended)
-pipx install cookiecutter-data-science
+pipx install git+https://github.com/RowSquared/cookiecutter-data-science.git
 
 # With pip from PyPI
-pip install cookiecutter-data-science
-
-# With conda from conda-forge (coming soon)
-# conda install cookiecutter-data-science -c conda-forge
+pip install git+https://github.com/RowSquared/cookiecutter-data-science.git
 ```
 
 ## Starting a new project
