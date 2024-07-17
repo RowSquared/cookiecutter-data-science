@@ -47,6 +47,8 @@ The directory structure of your new project will look something like this (depen
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
+├── pipelines             <- Pipeline tasks
+│
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.

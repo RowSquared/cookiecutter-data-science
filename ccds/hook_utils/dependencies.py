@@ -14,6 +14,8 @@ basic = [
     "numpy",
     "pandas",
     "scikit-learn",
+    "ploomber",
+    "boto3"
 ]
 
 scaffold = [
