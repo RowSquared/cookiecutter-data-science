@@ -19,6 +19,12 @@ requirements:
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 	{% elif "environment.yml" == cookiecutter.dependency_file -%}
 	conda env update --name $(PROJECT_NAME) --file environment.yml --prune
+	{% if "conda" == cookiecutter.environment_manager %}
+	{% if "Yes" == cookiecutter.include_r_kernel %}
+	R -e "IRkernel::installspec(user = FALSE)"
+	{% endif %}
+	{% endif %}
+
 	{% elif "Pipfile" == cookiecutter.dependency_file -%}
 	pipenv install
 	{% endif %}
@@ -72,7 +78,7 @@ sync_data_up:
 {% endif %}
 
 {% if cookiecutter.environment_manager != 'none' %}
-## Set up python interpreter environment
+## Set up python (R) interpreter environment
 .PHONY: create_environment
 create_environment:
 	{% if cookiecutter.environment_manager == 'conda' -%}
