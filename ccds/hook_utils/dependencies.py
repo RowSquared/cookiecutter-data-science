@@ -55,7 +55,7 @@ def write_dependencies(
             lines += [f"  - python={python_version}"]
             lines += [f"  - {p}" for p in packages if p not in pip_only_packages]
 
-            if include_r_kernel == "y" and environment_manager == "conda":
+            if include_r_kernel == "Yes" and environment_manager == "conda":
                 lines += [f"  - {r_dep}" for r_dep in r_dependencies]
 
             lines += ["  - pip:"]
