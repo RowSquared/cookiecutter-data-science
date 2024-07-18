@@ -37,7 +37,7 @@
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.cfg          <- Configuration file for flake8
+├── setup.cfg          <- Configuration file for flake8, ploomber...
 │
 └── {{ cookiecutter.module_name }}                <- Source code for use in this project.
     │

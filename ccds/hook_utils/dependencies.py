@@ -24,9 +24,15 @@ scaffold = [
     "tqdm",
 ]
 
+r_dependencies = [
+    "r-base",
+    "r-irkernel",
+]
+
 
 def write_dependencies(
-    dependencies, packages, pip_only_packages, repo_name, module_name, python_version
+    dependencies, packages, pip_only_packages, repo_name, module_name, python_version,
+    environment_manager, include_r_kernel
 ):
     if dependencies == "requirements.txt":
         with open(dependencies, "w") as f:
@@ -48,6 +54,9 @@ def write_dependencies(
 
             lines += [f"  - python={python_version}"]
             lines += [f"  - {p}" for p in packages if p not in pip_only_packages]
+
+            if include_r_kernel == "y" and environment_manager == "conda":
+                lines += [f"  - {r_dep}" for r_dep in r_dependencies]
 
             lines += ["  - pip:"]
             lines += [f"    - {p}" for p in packages if p in pip_only_packages]

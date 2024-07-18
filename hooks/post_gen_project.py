@@ -56,6 +56,8 @@ write_dependencies(
     repo_name="{{ cookiecutter.repo_name }}",
     module_name="{{ cookiecutter.module_name }}",
     python_version="{{ cookiecutter.python_version_number }}",
+    environment_manager="{{ cookiecutter.environment_manager }}", 
+    include_r_kernel="{{ cookiecutter.include_r_kernel }}"
 )
 
 write_custom_config("{{ cookiecutter.custom_config }}")
