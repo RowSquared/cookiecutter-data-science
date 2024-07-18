@@ -21,7 +21,7 @@ requirements:
 	conda env update --name $(PROJECT_NAME) --file environment.yml --prune
 	{% if "conda" == cookiecutter.environment_manager %}
 	{% if "Yes" == cookiecutter.include_r_kernel %}
-	R -e "IRkernel::installspec(user = FALSE)"
+	R -e "IRkernel::installspec(user = TRUE)"
 	{% endif %}
 	{% endif %}
 
