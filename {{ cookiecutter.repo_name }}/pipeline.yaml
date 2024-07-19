@@ -1,0 +1,13 @@
+#meta:
+#    source_loader:
+#        module: {{ cookiecutter.module_name }}
+#        path: {{ cookiecutter.module_name }}
+    #Add tasks defined in a different file to the current one. This direcive is useful for composing pipelines. For example, if you have a training and a serving pipeline, you can define the pre-processing logic in a pipeline.preprocessing.yaml and then import the file into pipeline.training.yaml and pipeline.serving.yaml:
+    #import_tasks_from: ./{{ cookiecutter.repo_name }}/pipelines/pipeline.yaml
+tasks:
+
+  # Add tasks here...
+
+  # Example
+  # - source: pipelines/ingestion/to/script.py
+  #   product: products/report.ipynb
