@@ -2,18 +2,13 @@
 
 _A logical, reasonably standardized but flexible project structure for doing and sharing data science work._
 
-**Cookiecutter Data Science (CCDS)** is a tool for setting up a data science project template that incorporates best practices. To learn more about CCDS's philosophy, visit the [project homepage](https://cookiecutter-data-science.drivendata.org/).
-
-> ℹ️ Cookiecutter Data Science v2 has changed from v1. It now requires installing the new cookiecutter-data-science Python package, which extends the functionality of the [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) templating utility. Use the provided `ccds` command-line program instead of `cookiecutter`.
+**Cookiecutter Data Science (CCDS)** is a tool for setting up a data science project template that incorporates best practices. 
 
 ## Installation
 
-Cookiecutter Data Science v2 requires Python 3.8+. Since this is a cross-project utility application, we recommend installing it with [pipx](https://pypa.github.io/pipx/). Installation command options:
+Cookiecutter Data Science requires Python 3.8+. Since this is a cross-project utility application, we recommend installing it within the base conda environment. Installation command options:
 
 ```bash
-# With pipx from PyPI (recommended)
-pipx install git+https://github.com/RowSquared/cookiecutter-data-science.git
-
 # With pip from PyPI
 pip install git+https://github.com/RowSquared/cookiecutter-data-science.git
 ```
@@ -81,28 +76,8 @@ The directory structure of your new project will look something like this (depen
     └── plots.py                <- Code to create visualizations   
 ```
 
-## Using v1
+## Documentation 
 
-If you want to use the old v1 project template, you need to have either the cookiecutter-data-science package or cookiecutter package installed. Then, use either command-line program with the `-c v1` option:
+ [See the docs for further documentation](https://cookiecutter-data-science.drivendata.org/).
 
-```bash
-ccds https://github.com/drivendataorg/cookiecutter-data-science -c v1
-# or equivalently
-cookiecutter https://github.com/drivendataorg/cookiecutter-data-science -c v1
-```
 
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](https://cookiecutter-data-science.drivendata.org/contributing/).
-
-### Installing development requirements
-
-```bash
-pip install -r dev-requirements.txt
-```
-
-### Running the tests
-
-```bash
-pytest tests
-```

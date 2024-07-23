@@ -27,6 +27,7 @@ scaffold = [
 r_dependencies = [
     "r-base",
     "r-irkernel",
+    "r-dotenv"
 ]
 
 

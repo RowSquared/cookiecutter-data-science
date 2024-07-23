@@ -26,6 +26,10 @@
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
+├── pipelines          <- The pipelines are composed of Jupyter Notebooks, R/Python scripts, and R Markdown files. 
+│                         It is recommended to place these files into specific existing folders or 
+│                         create new ones to ensure optimal navigation and organization.
+│
 ├── pyproject.toml     <- Project configuration file with package metadata for {{ cookiecutter.module_name }}
 │                         and configuration for tools like black
 │
@@ -38,6 +42,9 @@
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── setup.cfg          <- Configuration file for flake8, ploomber...
+│
+├── pipelines.yaml     <- Pipeline configuration file. It is reccomended to keep it at this level 
+│                         as it might broke if moved into other folders. further info at https://docs.ploomber.io/en/stable/user-guide/index.html
 │
 └── {{ cookiecutter.module_name }}                <- Source code for use in this project.
     │
@@ -57,6 +64,5 @@
     └── visualization  <- Scripts to create exploratory and results oriented visualizations
         └── visualize.py
 ```
-
 --------
 
