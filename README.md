@@ -35,18 +35,20 @@ The directory structure of your new project will look something like this (depen
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+├── docs               <- A default mkdocs project; see mkdocs.org for details
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── pipelines             <- Pipeline tasks
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         {{ cookiecutter.module_name }} and configuration for tools like black
+├── pipelines          <- The pipelines are composed of Jupyter Notebooks, R/Python scripts, and R Markdown files. 
+│                         It is recommended to place these files into specific existing folders or 
+│                         create new ones to ensure optimal navigation and organization.
+│
+├── pyproject.toml     <- Project configuration file with package metadata for {{ cookiecutter.module_name }}
+│                         and configuration for tools like black
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -56,24 +58,28 @@ The directory structure of your new project will look something like this (depen
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.cfg          <- Configuration file for flake8
+├── setup.cfg          <- Configuration file for flake8, ploomber...
 │
-└── {{ cookiecutter.module_name }}   <- Source code for use in this project.
+├── pipelines.yaml     <- Pipeline configuration file. It is reccomended to keep it at this level 
+│                         as it might broke if moved into other folders. further info at https://docs.ploomber.io/en/stable/user-guide/index.html
+│
+└── {{ cookiecutter.module_name }}                <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes {{ cookiecutter.module_name }} a Python module
+    ├── __init__.py    <- Makes {{ cookiecutter.module_name }} a Python module
     │
-    ├── config.py               <- Store useful variables and configuration
+    ├── data           <- Scripts to download or generate data
+    │   └── make_dataset.py
     │
-    ├── dataset.py              <- Scripts to download or generate data
+    ├── features       <- Scripts to turn raw data into features for modeling
+    │   └── build_features.py
     │
-    ├── features.py             <- Code to create features for modeling
+    ├── models         <- Scripts to train models and then use trained models to make
+    │   │                 predictions
+    │   ├── predict_model.py
+    │   └── train_model.py
     │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations   
+    └── visualization  <- Scripts to create exploratory and results oriented visualizations
+        └── visualize.py  
 ```
 
 ## Documentation 
